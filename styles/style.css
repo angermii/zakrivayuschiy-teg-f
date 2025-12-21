@@ -60,7 +60,6 @@
 .card {
   background-color: var(--background-color);
   border: solid 2px #000000;
-
 }
 
 .card__title {
@@ -73,7 +72,7 @@
   position: relative;
   max-width: var(--width);
   width: 100%;
-  aspect-ratio: 1 / 1; 
+  aspect-ratio: 1 / 1;
 }
 
 .label {
@@ -98,12 +97,12 @@
 }
 
 .card__img {
- height: 100%;
+  height: 100%;
   width: 100%;
-   object-fit: cover; 
-    border-top: solid 2px #000000;
+  object-fit: cover;
+  border-top: solid 2px #000000;
   border-bottom: solid 2px #000000;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .card__whitepaper__img {
@@ -132,9 +131,6 @@
 
 .card__now_img {
   filter: hue-rotate(0.25turn) blur(0.1rem) contrast(50%);
-}
-
-.card__body {
 }
 
 .card__text__container {
@@ -287,9 +283,6 @@ button:hover {
 
 .button:hover:before {
   transform: translateX(0);
-}
-
-.card__icon-button:hover {
 }
 
 .save__section {
