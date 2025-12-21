@@ -1,1 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --textwght: 410px;
+  --headingwght: 715px;
+  --pointswght: 400px;
+  --gradient-horizontal: repeating-linear-gradient(
+    to right,
+    #d3d3d3 0px 2px,
+    transparent 2px 4px
+  );
+  --gradient-vertical: repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0px 2px,
+    transparent 2px 4px
+  );
+  --gradient-color: linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --width: clamp(375px, 100vw, 704px);
+  --main-width: clamp(375px, 100vw, 700px);
+  --background-color: #ffffff;
+  --label-color: rgba(255, 255, 255, 0.5);
+  --button-color: #fff;
+  --heart-contour: #000;
+  --heart-hover: #000;
+  --animation-fill-color: red;
+  --sparks-color: red;
+}
