@@ -24,8 +24,7 @@
 
 .header {
   inline-size: var(--width);
-  font-family: "PressStart2P", monospace;
-  min-block-size: clamp(327px, 50vh, 372px);
+  font-family: "PressStart2P", fantasy;
   background-color: var(--background-color);
   border: solid 2px #000000;
   display: flex;
@@ -38,11 +37,15 @@
 
 .logo {
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  font-variation-settings: "wght" var(--pointswght);
+  margin-block-start: clamp(122px, 0.75vw + 119.19px, 130px);
 }
 
 .header__heading {
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   text-transform: uppercase;
+  font-variation-settings: "wght" var(--pointswght);
+  margin-block-end: clamp(122px, 0.75vw + 119.19px, 130px);
 }
 
 .main {
@@ -64,23 +67,27 @@
 
 .card__title {
   font-size: 18px;
+  line-height: 22px;
   padding: 4px 10px;
   min-height: 30px;
+  font-variation-settings: "wght" var(--headingwght);
+  border-block-end: solid 2px #000000;
 }
 
 .card__img__container {
   position: relative;
-  max-width: var(--width);
   width: 100%;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .label {
   position: absolute;
   right: 25px;
   top: 27px;
-  font-family: "PressStart2P", monospace;
+  font-family: "PressStart2P", fantasy;
   font-size: 14px;
+  font-variation-settings: "wght" var(--pointswght);
   color: rgba(0, 0, 0, 0.5);
   text-shadow: 1px 1px 0 var(--label-color), -1px -1px 0 var(--label-color),
     1px -1px 0 var(--label-color), -1px 1px 0 var(--label-color);
@@ -100,9 +107,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-top: solid 2px #000000;
-  border-bottom: solid 2px #000000;
-  box-sizing: border-box;
+  display: block;
 }
 
 .card__whitepaper__img {
@@ -125,7 +130,7 @@
   filter: sepia(100%);
 }
 
-.card__dificulties__img {
+.card__difficulties__img {
   filter: blur(1rem);
 }
 
@@ -138,14 +143,16 @@
   flex-direction: column;
   padding: 25px;
   gap: 25px;
-  overflow: auto;
+  overflow: visible;
+  border-block-start: solid 2px #000000;
 }
 
 .card__text {
   font-size: 18px;
+  line-height: 21px;
 }
 
-.card__butons {
+.card__buttons {
   display: flex;
   padding: 0 25px 25px;
   justify-content: end;
@@ -174,7 +181,7 @@
   flex-shrink: 0;
 }
 
-.countour {
+.contour {
   transition: fill 0.1s linear;
 }
 
@@ -238,12 +245,17 @@
   width: 130px;
   height: 38px;
   background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid #000000;
 }
 
 .button__text {
-  font-family: "PressStart2P", monospace;
+  font-family: "PressStart2P", fantasy;
   font-size: 14px;
+  line-height: 13px;
+  font-variation-settings: "wght" var(--pointswght);
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
@@ -295,6 +307,10 @@ button:hover {
   padding: 0;
   margin: 0;
   border: 2px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .save__icon {
@@ -304,13 +320,15 @@ button:hover {
 }
 
 .save__text {
-  font-family: "PressStart2P", monospace;
+  font-family: "PressStart2P", fantasy;
   font-size: 14px;
+  line-height: 14px;
+  font-variation-settings: "wght" var(--pointswght);
   mix-blend-mode: difference;
 }
 
 .save__dialog {
-  width: 353px;
+  max-inline-size: 353px;
   padding: 30px;
   border: 2px solid #000000;
   color: var(--button-color);
@@ -318,7 +336,7 @@ button:hover {
 }
 
 .save__dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .save__dialog__container {
@@ -350,6 +368,15 @@ button:hover {
 }
 
 @media (width <= 375px) {
+  .header {
+    margin-block-end: 100px;
+  }
+
+  .label {
+    right: 24px;
+    top: 25px;
+  }
+
   .save {
     margin: 50px auto 100px;
     width: 306px;
@@ -366,7 +393,13 @@ button:hover {
     height: 28px;
   }
 
+  dialog[open] .save__icon {
+    width: 39px;
+    height: 39px;
+  }
+
   .save__dialog {
     padding: 30px 40px;
+    max-inline-size: 341px;
   }
 }
