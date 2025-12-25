@@ -1,8 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --textwght: 410px;
-  --headingwght: 715px;
-  --pointswght: 400px;
+  --textwght: 410;
+  --headingwght: 715;
   --gradient-horizontal: repeating-linear-gradient(
     to right,
     #d3d3d3 0px 2px,

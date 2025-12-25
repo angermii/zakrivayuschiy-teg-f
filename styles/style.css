@@ -37,14 +37,12 @@
 
 .logo {
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
-  font-variation-settings: "wght" var(--pointswght);
   margin-block-start: clamp(122px, 0.75vw + 119.19px, 130px);
 }
 
 .header__heading {
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   text-transform: uppercase;
-  font-variation-settings: "wght" var(--pointswght);
   margin-block-end: clamp(122px, 0.75vw + 119.19px, 130px);
 }
 
@@ -69,7 +67,6 @@
   font-size: 18px;
   line-height: 22px;
   padding: 4px 10px;
-  min-height: 30px;
   font-variation-settings: "wght" var(--headingwght);
   border-block-end: solid 2px #000000;
 }
@@ -87,7 +84,6 @@
   top: 27px;
   font-family: "PressStart2P", fantasy;
   font-size: 14px;
-  font-variation-settings: "wght" var(--pointswght);
   color: rgba(0, 0, 0, 0.5);
   text-shadow: 1px 1px 0 var(--label-color), -1px -1px 0 var(--label-color),
     1px -1px 0 var(--label-color), -1px 1px 0 var(--label-color);
@@ -150,6 +146,7 @@
 .card__text {
   font-size: 18px;
   line-height: 21px;
+  font-variation-settings: "wght" var(--textwght);
 }
 
 .card__buttons {
@@ -255,7 +252,6 @@
   font-family: "PressStart2P", fantasy;
   font-size: 14px;
   line-height: 13px;
-  font-variation-settings: "wght" var(--pointswght);
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
@@ -292,7 +288,7 @@ button:hover {
   cursor: pointer;
 }
 
-.button:hover:before {
+.button:hover::before {
   transform: translateX(0);
 }
 
@@ -323,7 +319,6 @@ button:hover {
   font-family: "PressStart2P", fantasy;
   font-size: 14px;
   line-height: 14px;
-  font-variation-settings: "wght" var(--pointswght);
   mix-blend-mode: difference;
 }
 
